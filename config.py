@@ -4,14 +4,15 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-SESSION_NAME = "AQBrTOoOx0MTXnXQKJnnq097GZOm784U0fQUUyVCqTFC6p1ZNOXOlrOYBq28R0si33USz5IrlK_OqC97yrGq0TNezXbHxqoqKqvmjU4tWM_BJRHe-o2LWyj-r9dQXUdrFHP7NLJ9tGCO9KIAObQdcWgkkRodPha-ROsxKNlBEqx7QMau1PVYOMBGV2YHmfetwjF_FPdVsCF_rrbbNh9jp9uBtjd2KkxXMQYuIvBILr5H0QKL6fOeRRqjuBX7fUMtgRvdgKDWSbKq9F9qk28htLQHWDkwacAh5UUlIWZtURoXfKldbsFeAxxzvdoV2JO811ho_CikpAUPycY8vkrI-CaRbI7PfQA"
-BOT_TOKEN = "2029246910:AAGtG4kVCRzdKGeetWkzFWxlDCf3V57zf_c"
-BOT_NAME = "miss tanu"
+SESSION_NAME = getenv("SESSION_NAME", "session")
+BOT_TOKEN = getenv("BOT_TOKEN")
+BOT_NAME = getenv("BOT_NAME")
 
-API_ID = "3992490"
-API_HASH = "3f35dd969e3248ba10c0d515381e1e78"
+API_ID = int(getenv("API_ID"))
+API_HASH = getenv("API_HASH")
 
-DURATION_LIMIT = "7"
-COMMAND_PREFIXES = "/"
+DURATION_LIMIT = int(getenv("DURATION_LIMIT", "7"))
 
-SUDO_USERS = "1604513187"
+COMMAND_PREFIXES = list(getenv("COMMAND_PREFIXES", "/ !").split())
+
+SUDO_USERS = list(map(int, getenv("SUDO_USERS").split()))
