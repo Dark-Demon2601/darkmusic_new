@@ -49,11 +49,11 @@ async def alive(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "ɢʀᴏᴜᴘ", url=f"https://t.me/phoenix_music_suport}"
+                        "ɢʀᴏᴜᴘ", url="https://t.me/phoenix_music_suport"
                     
-                   ),
+                   )
                     InlineKeyboardButton(
-                        "ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/phoenix_music_new}"
+                        "ᴄʜᴀɴɴᴇʟ", url="https://t.me/phoenix_music_new"
                    
                     )
                 ]
