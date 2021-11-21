@@ -1,4 +1,3 @@
-[In reply to ASHU❣💫✨]
 from os import path
 
 from pyrogram import Client, filters
